@@ -12,7 +12,7 @@ const getUser = ()=>{
     })
 }
 
-const createEmpleado=(User)=>{
+const createUser=(User)=>{
     return `<div class="col-6 col-sm-4 col-md-4 col-xl-3 my-1">
                 <div class="card p-2 h-100 text-wrap" style="width: auto;">
                     <img src="${User.avatar}" class="card-img-top" alt="user-image" style="width: 75px;>
@@ -29,7 +29,7 @@ $( async function () {
     const Users = await getUser();
 
     Users.forEach( (User) => {
-        const UserHTML= createEmpleado(User)
+        const UserHTML= createUser(User)
         $("#emp-container").append(UserHTML)        
     });
     
